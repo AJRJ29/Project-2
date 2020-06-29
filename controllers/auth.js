@@ -17,3 +17,5 @@ router.get('/login', function(req, res) {
     res.render('auth/login');
 })
 // login post route
+
+module.exports = router
