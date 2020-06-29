@@ -22,7 +22,7 @@ app.get('/', function(req, res) {
 })
 
 // include auth controller
-app.use('/auth,', require('./controllers/auth'));
+app.use('/auth', require('./controllers/auth'));
 
 
 // initialize app on port
