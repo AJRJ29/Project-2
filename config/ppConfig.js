@@ -15,7 +15,7 @@ passport.deserializeUser(function(id, callback) {
 
 passport.use(new LocalStrategy({
     usernameField: 'email',
-    passwordField: 'passsWord'
+    passwordField: 'password'
 },  function(email, password, callback) {
     db.user.findOne({ where: { email }}).then(function(user) {
         if (!user || !user.validPassword(password)) {

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models')
 const flash = require('flash');
-const passport;
+const passport = require('../config/ppConfig');
 //TODO: update require below to passport config file path
 // register get toute 
 router.get('/register', function(req, res) {
@@ -52,7 +52,7 @@ router.get('/login', function(req, res, next) {
         if (error) {
             return next(error);
         }
-        req.login(function(user, errow) {
+        req.login(function(user, error) {
             // if errow move to error
             if (error) next(error)
             // if success flash success message 
