@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../models')
+const db = require('../models');
 const flash = require('flash');
 const passport = require('../config/ppConfig');
 //TODO: update require below to passport config file path
@@ -27,12 +27,12 @@ router.post('/register', function(req, res) {
         } else {
             console.log("User email already exist! 🚁");
             req.flash('error', 'Error: email already exist for user. Try again');
-            res.redirect('/auth/register')
+            res.redirect('auth/register')
         }
     }).cath(function(err) {
         console.log(`Error found. \nMessage: ${error.message}. \nPlease review - ${err}`);
         req.flash('error', err.message);
-        res.redirect('/auth/register')
+        res.redirect('auth/register')
     })
 })
 
@@ -46,7 +46,7 @@ router.get('/login', function(req, res, next) {
         if (!user) {
             req.flash('error', 'Invalid username or password');
             req.session.save(function() {
-                return res.redirect('/auth/login');
+                return res.redirect('auth/login');
             });
         }
         if (error) {
