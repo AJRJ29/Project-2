@@ -19,7 +19,7 @@ app.set('view engine', 'ejs');
 app.use(ejsLayouts);
 app.use(require('morgan')('dev'));
 app.use(helmet());
-
+const isLoggedIn = require('./middleware/isLoggedIn')
 // create new instance of class sequelize store
 const sessionStore = new SequelizeStore({
     db: db.sequelize,
@@ -51,6 +51,10 @@ app.use(function(req, res, next) {
 app.get('/', function(req, res) {
     //check to see if user loggged in
     res.render('index');
+})
+
+app.get('/profile', isLoggedIn, function(req, res) {
+    res.render('profile');
 })
 
 // include auth controller
