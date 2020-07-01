@@ -7,8 +7,10 @@ passport.serializeUser(function(user, callback) {
 }) 
 
 passport.deserializeUser(function(id, callback) {
-    db.user.findByPK(id).then(function(user) {
-        callback(null, user)
+    console.log(id)
+    db.user.findByPk(id).then(function(user) {
+        console.log(user)
+        callback(null, user);
     }).catch(callback);
 })
 
@@ -23,7 +25,7 @@ passport.use(new LocalStrategy({
         } else {
             callback(null, user);
         }
-    }).cath(callback);
+    }).catch(callback);
 }));
 
 

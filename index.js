@@ -7,6 +7,7 @@ const session = require('express-session');
 const flash = require('flash');
 const passport = require('./config/ppConfig');
 const db = require('./models')
+const axios = require('axios'); 
 
 // want add a link to our customer middleware for isLoggedIn
 const SequelizeStore = require('connect-session-sequelize')(session.Store)
@@ -26,7 +27,7 @@ const sessionStore = new SequelizeStore({
     expiration: 1000 * 60 * 30
 })
 
-app.use(session( {
+app.use(session({
     secret: process.env.SESSION_SECRET,
     store: sessionStore,
     resave: false,
@@ -46,7 +47,6 @@ app.use(function(req, res, next) {
 
     next();
 });
-
 // ROUTES
 app.get('/', function(req, res) {
     //check to see if user loggged in
