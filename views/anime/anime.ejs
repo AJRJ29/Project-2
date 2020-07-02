@@ -1,1 +1,13 @@
-<%= anime.title %>
+<div class="well">
+    <img src="<%= anime[0].image_url %>" alt="">
+    <h2><%= anime[0].title %></h2>
+    <h2><%= anime[0].type %></h2>
+    <h2><%= anime[0].synopsis %></h2>
+ </div>
+
+ <form method="POST" action="/anime">
+    <input hidden type="text" name="name" >
+    <button class="btn btn-primary" type="submit">Bookmark</button>
+  </form>
+
+

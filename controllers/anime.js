@@ -9,20 +9,12 @@ router.get('/:name', (req, res) => {
     var animeUrl = `https://api.jikan.moe/v3/search/anime?q=${(name).toLowerCase()}&page=1$`;
     // Use request to call the API
     axios.get(animeUrl).then(function(apiResponse) {
-      var anime = apiResponse.results;
-      console.log(anime)
-      res.render('anime', {anime})
+      var anime = apiResponse.data.results;
+      res.render('anime/anime', {anime})
     })
 })
 
-//get route from the home page to search for an anime
-    //use axios to grab information from a form to for a query string for the API 
-    //redirect information on the home page
-
-//get route to anime details
-    //use axios to grab informatian from a form
-    //render information on anime ejs
-
+router.post('/')
 //post route to add anime to your bookmark
     //use find or create to add anime to your bookmark
     //then redirect to profile 
