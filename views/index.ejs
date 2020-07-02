@@ -1,2 +1,15 @@
 <h1>Login or Register to join our Website!</h1>
 
+<form method="GET" action="/">
+    <input type="text" name="title">
+    <button class="btn btn-primary" type="submit">Search</button>
+  </form>
+
+<% anime.forEach(function(anime) { %>
+    <div class="well">
+      <h2><a href="/<%= anime.title %>"><%= anime.title %></a></h2>
+    </div>
+  <% }); %>
+</div>
+
+

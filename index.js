@@ -1,10 +1,11 @@
 // Require NPM libraries
 require('dotenv').config();
 const Express = require('express');
+const methodOverride = require('method-override')
 const ejsLayouts = require('express-ejs-layouts');
 const helmet = require('helmet');
 const session = require('express-session');
-const flash = require('flash');
+const flash = require('connect-flash');
 const passport = require('./config/ppConfig');
 const db = require('./models')
 const axios = require('axios'); 
@@ -20,6 +21,7 @@ app.set('view engine', 'ejs');
 app.use(ejsLayouts);
 app.use(require('morgan')('dev'));
 app.use(helmet());
+app.use(methodOverride('_method'))
 const isLoggedIn = require('./middleware/isLoggedIn')
 // create new instance of class sequelize store
 const sessionStore = new SequelizeStore({
@@ -42,23 +44,29 @@ app.use(passport.session());
 app.use(flash());
 
 app.use(function(req, res, next) {
-    res.locals.alert = req.flash();
+    res.locals.alerts = req.flash();
     res.locals.currentUser = req.user;
 
     next();
 });
 // ROUTES
 app.get('/', function(req, res) {
-    //check to see if user loggged in
-    res.render('index');
+    // let name = req.body.name
+    let animeUrl = `https://api.jikan.moe/v3/search/anime?q=${req.query.title}&page=1`;
+    axios.get(animeUrl).then( function(apiResponse) {
+        let anime = apiResponse.data.results;
+        res.render('index', {anime});
+    })
 })
 
 app.get('/profile', isLoggedIn, function(req, res) {
     res.render('profile');
 })
 
+
 // include auth controller
 app.use('/auth', require('./controllers/auth'));
+app.use('/anime', require('./controllers/anime'))
 
 
 // initialize app on port

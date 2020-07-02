@@ -43,7 +43,8 @@ module.exports = function(sequelize, DataTypes) {
             }
         }
     });
-    user.assotiate = function(models) {
+    user.associate = function(models) {
+        models.user.hasMany(models.anime)
         //Todo: any user associate you want
     }
     //validPassword definition to validite password at usr login
