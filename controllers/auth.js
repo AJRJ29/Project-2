@@ -3,7 +3,6 @@ const router = express.Router();
 const db = require('../models');
 const flash = require('connect-flash');
 const passport = require('../config/ppConfig');
-//TODO: update require below to passport config file path
 // register get route 
 
 router.get('/register', function(req, res) {

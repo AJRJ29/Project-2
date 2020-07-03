@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Auth Boilerplate</title>
 </head>
 <body>
-    <header>
+    <header>         
         <nav>
-
-
-            <% if (currentUser) { %>
-                <a href="/auth/logout">Logout</a>
-                <a href="/profile">Profile</a>
-            <% } else { %>
-                <a href="/auth/register">Register</a>
-                <a href="/auth/login">Login</a>
-            <% } %>
-
+            <div class="nav-wrapper">
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/">Home</a></li>
+                <% if (currentUser) { %>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/auth/logout">Logout</a></li>
+                <% } else { %>
+                    <li><a href="/auth/register">Register</a></li>
+                    <li><a href="/auth/login">Login</a></li>
+                <% } %>
+                </ul>
+            </div>
         </nav>
     </header>
     <div class="container">
@@ -25,5 +28,6 @@
         <%- include('./partials/alerts') %>
         <%- body %>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>

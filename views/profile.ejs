@@ -1,10 +1,10 @@
 <h2>Hi <%= currentUser.name %>. Welcome to the app!</h2>
-<!-- <h1><%= anime[0].name %></h1> -->
   
 <% anime.forEach(function(anime) { %>
     <div class="well">
         <h2><a href="/anime/<%= anime.name %>"><%= anime.name %></a></h2>
         <form method="POST" action="/anime/<%= anime.name %>/?_method=DELETE">
+            <input hidden type="text" name="name" value="anime[0].title">
             <button class="btn btn-primary" type="submit">DELETE</button>
         </form> 
     </div>

@@ -1,7 +1,7 @@
 // Require NPM libraries
 require('dotenv').config();
 const Express = require('express');
-const methodOverride = require('method-override')
+const methodOverride = require('method-override');
 const ejsLayouts = require('express-ejs-layouts');
 const helmet = require('helmet');
 const session = require('express-session');

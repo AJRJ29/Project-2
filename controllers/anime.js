@@ -3,6 +3,12 @@ const router = express.Router();
 const db = require('../models');
 const axios = require('axios');
 
+router.get('/', function(req, res) {
+    db.anime.findAll().then(anime => {
+      res.render('anime/search', {anime})
+    })
+});
+
 router.get('/:name', (req, res) => {
     // let name = req.body.name
     let name = req.params.name
@@ -16,7 +22,6 @@ router.get('/:name', (req, res) => {
 
 router.post('/', function(req, res) {
     let name = req.body.name
-    console.log(req.user)
     db.anime.findOrCreate({
         where: {
             name: name,
@@ -27,14 +32,17 @@ router.post('/', function(req, res) {
     })
 })
 
-router.delete('/', (req, res) => {
+router.delete('/', function(req, res) {
     let name = req.body.name
     db.anime.destroy({
       where: {
-        name: name
+        name: name,
+        userId: req.user.dataValues.id
       }
     })
-    .then(res.redirect('/anime'))
+    .then(function() {
+        res.redirect('/anime')
+    })
 })
   
 
