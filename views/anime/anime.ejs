@@ -5,9 +5,9 @@
     <h2><%= anime[0].synopsis %></h2>
  </div>
 
- <form method="POST" action="/anime">
-    <input hidden type="text" name="name" >
+<form method="POST" action="/anime">
+    <input hidden type="text" name="name" value="<%= anime[0].title %>">
     <button class="btn btn-primary" type="submit">Bookmark</button>
-  </form>
+</form>
 
 

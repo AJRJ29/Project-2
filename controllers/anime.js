@@ -14,10 +14,29 @@ router.get('/:name', (req, res) => {
     })
 })
 
-router.post('/')
-//post route to add anime to your bookmark
-    //use find or create to add anime to your bookmark
-    //then redirect to profile 
+router.post('/', function(req, res) {
+    let name = req.body.name
+    console.log(req.user)
+    db.anime.findOrCreate({
+        where: {
+            name: name,
+            userId: req.user.dataValues.id
+        }
+    }).then(function() {
+        res.redirect('/profile')
+    })
+})
+
+router.delete('/', (req, res) => {
+    let name = req.body.name
+    db.anime.destroy({
+      where: {
+        name: name
+      }
+    })
+    .then(res.redirect('/anime'))
+})
+  
 
 //post route to add a comment
     //use create to make a comment the redirect it to anime ejs

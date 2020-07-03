@@ -60,7 +60,14 @@ app.get('/', function(req, res) {
 })
 
 app.get('/profile', isLoggedIn, function(req, res) {
-    res.render('profile');
+    db.anime.findAll({
+        where: {
+            userId: req.user.dataValues.id
+        }
+    })
+    .then( function(anime) {
+    res.render('profile', {anime});
+    })
 })
 
 
