@@ -51,10 +51,9 @@ app.use(function(req, res, next) {
 });
 // ROUTES
 app.get('/', function(req, res) {
-    // let name = req.body.name
-    let animeUrl = `https://api.jikan.moe/v3/search/anime?q=${req.query.title}&page=1`;
+    let animeUrl = `https://api.jikan.moe/v3/top/anime/1/tv`;
     axios.get(animeUrl).then( function(apiResponse) {
-        let anime = apiResponse.data.results;
+        let anime = apiResponse.data.top;
         res.render('index', {anime});
     })
 })

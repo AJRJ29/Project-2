@@ -1,15 +1,9 @@
-<h2>Hi <%= currentUser.name %>. Welcome to the app!</h2>
-  
+<h2><%= currentUser.name %>'s Profile</h2>
+
 <% anime.forEach(function(anime) { %>
-    <div class="well">
-        <h2><a href="/anime/<%= anime.name %>"><%= anime.name %></a></h2>
-        <form method="POST" action="/anime/<%= anime.name %>/?_method=DELETE">
-            <input hidden type="text" name="name" value="anime[0].title">
-            <button class="btn btn-primary" type="submit">DELETE</button>
-        </form> 
-    </div>
-  <% }); %>
-
-  
-
+    <h5><a href="/anime/<%= anime.name %>"><%= anime.name %></a></h5>
+    <form method="POST" action="/anime/<%= anime.name %>/?_method=DELETE">
+        <button class="btn" type="submit">DELETE</button>
+    </form>
+<% }); %> 
  
