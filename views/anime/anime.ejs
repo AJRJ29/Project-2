@@ -1,10 +1,14 @@
-
-<img src="<%= anime[0].image_url %>" alt="">
-<h2><%= anime[0].type %></h2>
-<span><h2><%= anime[0].title %></h2></span>
-<p><%= anime[0].synopsis %></p>
-<form method="POST" action="/anime">
-    <input hidden type="text" name="name" value="<%= anime[0].title %>">
-    <button class="btn" type="submit">Bookmark</button>
-</form>
+<div class="anime-container">
+    <div class="anime-pics">
+        <img class="anime-pic z-depth-5" src="<%= anime[0].image_url %>" alt="">
+    </div>
+    <div class="anime-details-container">
+        <span><h3 class="black-text #fffde7 yellow lighten-5"><%= anime[0].title %></h3></span>
+        <p class="black-text #fffde7 yellow lighten-5"><%= anime[0].synopsis %></p>
+        <form method="POST" action="/anime">
+            <input hidden type="text" name="name" value="<%= anime[0].title %>">
+            <button class="btn yellow black-text waves-effect waves-light" type="submit">Bookmark</button>
+        </form>
+    </div>
+</div>
 

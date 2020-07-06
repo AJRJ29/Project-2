@@ -69,11 +69,9 @@ app.get('/profile', isLoggedIn, function(req, res) {
     })
 })
 
-
 // include auth controller
 app.use('/auth', require('./controllers/auth'));
 app.use('/anime', require('./controllers/anime'))
-
 
 // initialize app on port
 app.listen(process.env.PORT || 3000, function() {

@@ -45,6 +45,7 @@ module.exports = function(sequelize, DataTypes) {
     });
     user.associate = function(models) {
         models.user.hasMany(models.anime)
+        models.user.belongsToMany(models.anime, {through: 'users_anime'})
         //Todo: any user associate you want
     }
     //validPassword definition to validite password at usr login

@@ -1,3 +1,143 @@
-body {
-   
+/* LAYOUTS */
+
+.nav-wrapper {
+    background: black;
 }
+
+/* INDEX EJS */
+
+.home-container {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+}
+
+.home-img {
+    height: 280px;
+    width: 200px
+}
+
+.home-pic-container{
+    display: flex;
+    height: 350px;
+    width: 300px;
+    /* border: 1px solid red; */
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 1rem;
+    flex: 0
+}
+
+.anime-name {
+    color: white;
+}
+
+.home-header {
+    text-align: center;
+}
+
+/* SEARCH EJS */
+
+.search-container {
+    display: inline;
+    height: 100%;
+    width: 100%;
+}
+
+.collection {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+.search-title {
+    width: 100%;
+    margin: 0;
+}
+
+/* ANIME EJS */
+
+.anime-container {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.anime-details-container {
+    display: flex;
+    justify-content: flex-start; 
+    /* border: 1px solid red; */
+    flex-wrap: wrap;
+    height: 400px;
+    width: 600px;
+    margin: 1rem;
+}
+
+.anime-pics {
+    height: 400px;
+    width: 330px;
+    /* border: 1px solid red; */
+    margin: 1rem;
+}
+
+.anime-pic {
+    height: 400px;
+    width: 290px;
+}
+
+/* PROFILE EJS */
+
+.profile-container {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+}
+
+.bookmark-container {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: flex-start;
+    height: 50px;
+    width: 800px;
+    margin: 5px;
+}
+
+.delete-container {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: flex-end;
+    height: 40px;
+    width: 90px;
+}
+
+body {
+    background-image: url("https://wallpapercave.com/wp/wp1959331.png");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+p {
+    font-size: 19px;
+    height: 110px;
+}
+

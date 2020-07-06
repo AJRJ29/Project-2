@@ -1,8 +1,12 @@
-<form method="GET" action="/anime">
-    <input type="text" name="name">
-    <button class="btn btn-primary" type="submit">Search</button>
-</form>
-
-<% anime.forEach(function(anime) { %> 
-    <h5><a href="/anime/<%= anime.title %>"><%= anime.title %></a></h5>
-<% }); %>  
+<div class="search-container">
+    <form method="GET" action="/anime">
+        <input type="text" name="name">
+        <button class="btn blue darken-2" type="submit">Search</button>
+    </form>
+</br>
+    <% anime.forEach(function(anime) { %> 
+        <div class="collection">
+            <h5 class="search-title"><a class="collection-item black-text" href="/anime/<%= anime.title %>"><%= anime.title %></a></h5>
+         </div>
+    <% }); %>  
+</div>       
