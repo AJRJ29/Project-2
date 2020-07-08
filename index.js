@@ -72,25 +72,6 @@ app.get('/profile', isLoggedIn, function(req, res) {
     })
 })
 
-// app.post('/profile', uploads.single('inputFile'), function(req, res) {
-//     console.log("Post Route hit");
-
-//     //get input file from user
-//     let file = req.file.path;
-  
-//     //upload file to cloudinary
-//     cloudinary.uploader.upload(file, function(result) {
-//       // return a render page w/ cloudinary link to formatted image
-//       let cloudID = result.public_id
-//       let cloudLink = `https://res.cloudinary.com/genereal-assembly/image/upload/e_blue:0/a_0/v1593119917/${cloudID}.png`;
-//       res.render('picture', { image: cloudLink });
-//     }).catch(function(error) {
-//         console.log(error)
-//     })
-// })
-
-
-
 // include auth controller
 app.use('/auth', require('./controllers/auth'));
 app.use('/anime', require('./controllers/anime'));

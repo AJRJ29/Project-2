@@ -44,21 +44,6 @@ router.delete('/:name', function(req, res) {
     })
 })
 
-router.post('/:name/comments', function(req, res) {
-    db.comment.create({
-        name: req.body.name,
-        conetent: req.body.content,
-        animeId: req.params.id
-    })
-    .then(function() {
-        res.redirect(`/anime/${req.params.name}`)
-    })
-    .catch(function(error) {
-        console.log(error)
-        res.status(400).render('main/404')
-    })
-})
-  
 module.exports = router
 
 

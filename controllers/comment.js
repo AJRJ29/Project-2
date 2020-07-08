@@ -29,22 +29,5 @@ router.post('/:id', function(req, res) {
     })
 })
 
-router.post('/', uploads.single('inputFile'), function(req, res) {
-    console.log("Post Route hit");
-
-    //get input file from user
-    let file = req.file.path;
-  
-    //upload file to cloudinary
-    cloudinary.uploader.upload(file, function(result) {
-      // return a render page w/ cloudinary link to formatted image
-      let cloudID = result.public_id
-      let cloudLink = `https://res.cloudinary.com/genereal-assembly/image/upload/e_blue:0/a_0/v1593119917/${cloudID}.png`;
-      res.render('anime/comment', { image: cloudLink });
-    }).catch(function(error) {
-        console.log(error)
-    })
-})
-
 
 module.exports = router
