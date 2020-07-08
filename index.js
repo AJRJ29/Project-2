@@ -9,12 +9,15 @@ const flash = require('connect-flash');
 const passport = require('./config/ppConfig');
 const db = require('./models')
 const axios = require('axios'); 
+const multer = require('multer');
+const cloudinary = require('cloudinary');
 
 // want add a link to our customer middleware for isLoggedIn
 const SequelizeStore = require('connect-session-sequelize')(session.Store)
 
 //app setup
 const app = Express();
+const uploads = multer({dest: './uploads'})
 app.use(Express.urlencoded({ extended: false}));
 app.use(Express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
@@ -69,9 +72,29 @@ app.get('/profile', isLoggedIn, function(req, res) {
     })
 })
 
+// app.post('/profile', uploads.single('inputFile'), function(req, res) {
+//     console.log("Post Route hit");
+
+//     //get input file from user
+//     let file = req.file.path;
+  
+//     //upload file to cloudinary
+//     cloudinary.uploader.upload(file, function(result) {
+//       // return a render page w/ cloudinary link to formatted image
+//       let cloudID = result.public_id
+//       let cloudLink = `https://res.cloudinary.com/genereal-assembly/image/upload/e_blue:0/a_0/v1593119917/${cloudID}.png`;
+//       res.render('picture', { image: cloudLink });
+//     }).catch(function(error) {
+//         console.log(error)
+//     })
+// })
+
+
+
 // include auth controller
 app.use('/auth', require('./controllers/auth'));
-app.use('/anime', require('./controllers/anime'))
+app.use('/anime', require('./controllers/anime'));
+app.use('/comment', require('./controllers/comment'));
 
 // initialize app on port
 app.listen(process.env.PORT || 3000, function() {

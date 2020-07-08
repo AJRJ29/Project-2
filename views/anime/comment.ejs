@@ -1,4 +1,12 @@
-<form method="POST" action="/anime/comments">
+<% anime.comments.forEach(function(comment) { %>
+    <div class="well">
+      <h3>
+        "<%= comment.content %>" - <%= comment.name %>
+      </h3>
+    </div>
+  <% }) %>
+
+<form method="POST" action="/comment/<%= anime.id %>">
     <div class="form-group">
     <label for="name">Name</label>
     <input type="text" class="form-control" id="name" name="name" required>
@@ -8,5 +16,5 @@
     <label for="content">Comment</label>
     <textarea type="text" class="form-control" id="content" name="content" required></textarea>
     </div>
-    <input type="submit" class="btn btn-primary">
+    <input type="submit" class="btn">
 </form>

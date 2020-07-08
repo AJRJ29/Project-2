@@ -1,15 +1,24 @@
-<form action="/auth/register" method="POST">
-    <div class="form-group">
-        <label for="authEmail">Email</label>
-        <input type="authEmail" class="form-controll" type="email" name="email">
-    </div>
-    <div class="form-group">
-        <label for="authName">Name</label>
-        <input type="authName" class="form-controll" type="text" name="name">
-    </div>
-    <div class="form-group">
-        <label for="authPassword">Password</label>
-        <input id="authPassword" class="form-control" type="password" name="password">
-    </div>
-    <input class="btn" type="submit">
-</form>
+<div class="row">
+    <form class="col s12" action="/auth/register" method="POST">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="authName" type="text" name="name" class="validate">
+          <label for="authName">Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="authPassword" type="password" name="password" class="validate">
+          <label for="authPassword">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="authEmail" type="email" name="email" class="validate">
+          <label for="authEmail">Email</label>
+          <input class="btn" type="submit">
+        </div>
+      </div>
+    </form>
+</div>
+        

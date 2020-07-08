@@ -2,6 +2,7 @@
 
 .nav-wrapper {
     background: black;
+
 }
 
 /* INDEX EJS */
@@ -43,20 +44,24 @@
 
 /* SEARCH EJS */
 
-.search-container {
-    display: inline;
-    height: 100%;
-    width: 100%;
+.search-body {
+    background-image: url("https://images.alphacoders.com/656/thumb-1920-656720.jpg");
+    background-size: cover;
+
+}
+
+.seach-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .collection {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 100%;
+    flex-wrap: wrap;
     width: 100%;
-    background-color: transparent;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -103,6 +108,10 @@
 
 /* PROFILE EJS */
 
+.profileejs-container {
+    background-image: url("https://cdn.wallpapersafari.com/84/12/ktoNAr.jpg");
+}
+
 .profile-container {
     display: flex;
     /* border: 1px solid red; */
@@ -119,7 +128,7 @@
     justify-content: flex-start;
     height: 50px;
     width: 800px;
-    margin: 5px;
+    border: none;
 }
 
 .delete-container {
@@ -141,3 +150,7 @@ p {
     height: 110px;
 }
 
+.picture {
+    height: 300px;
+    width: 200px;
+}

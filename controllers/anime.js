@@ -32,38 +32,6 @@ router.get('/:name', (req, res) => {
     })
 })
 
-// router.get('/:name', function(req, res) {
-//     let animeUrl = `https://api.jikan.moe/v3/search/anime?q=${(req.params.name)}&page=1$`;
-//     db.anime.findOne({
-//       where: { name: req.params.name }
-//     })
-//     .then(function(anime) {
-//       if (!anime) throw Error()
-//       console.log(anime)
-//       db.comment.findAll({
-//         where: { animeId: anime.name }
-//       })
-//       .then(axios.get(animeUrl).then(function(apiResponse, comments) {
-//         let anime = apiResponse.data.results;
-//         res.render('anime/anime', { anime, comments })
-//       }))
-//     })
-//     .catch(function(error) {
-//       console.log(error)
-//     })
-// })
-
-router.post('/comments', function() {
-    db.comment.create({
-        name: req.body.name,
-        content: req.body.content,
-        animeId: req.anime.datavalues.id
-    })
-    .then(function() {
-        res.redirect('/anime/comments')
-    })
-})
-
 router.delete('/:name', function(req, res) {
     db.anime.destroy({
       where: {
