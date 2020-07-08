@@ -74,7 +74,7 @@ _**GET**_
 
 _**POST**_
 
-**/auth/register** - create a user in the db
+**/auth/register** - create a user in the database
 
 **/auth/login** - use passport to authenticate the user
 
@@ -86,5 +86,13 @@ _**DELETE**_
 
 **/anime:name** - delete a bookmark 
 
+
+_**Wireframe**_
+
+![](public/img/wireframe.png)
+
+## 2. Technologies Used
+
+**Node Modules** Axios, BCrypt, Flash, Dotenv, EJS, Express, Express EJS Layouts, Express Sessions, Helmet, Method Override, Morgan, Nodemon, Passport, Sequelize.
 
 
