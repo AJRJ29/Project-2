@@ -15,7 +15,8 @@ router.post('/register', function(req, res) {
             email: req.body.email
         }, defaults: {
             name: req.body.name,
-            password: req.body.password
+            password: req.body.password,
+            image: req.body.image
         }
     })
     .then(function([user, created]) {

@@ -108,35 +108,38 @@
 
 /* PROFILE EJS */
 
-.profileejs-container {
+.profile-body {
     background-image: url("https://cdn.wallpapersafari.com/84/12/ktoNAr.jpg");
 }
 
-.profile-container {
+.profile-top {
     display: flex;
     /* border: 1px solid red; */
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     height: 100%;
     width: 100%;
 }
 
+/* .profile-container {
+    display: flex;
+    /* border: 1px solid red; 
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+} */
+
 .bookmark-container {
     display: flex;
-    /* border: 1px solid red; */
     justify-content: flex-start;
+    flex-direction: wrap;
+    justify-content: space-between;
+    align-items: center;
     height: 50px;
     width: 800px;
     border: none;
-}
-
-.delete-container {
-    display: flex;
-    /* border: 1px solid red; */
-    justify-content: flex-end;
-    height: 40px;
-    width: 90px;
 }
 
 body {
@@ -150,7 +153,14 @@ p {
     height: 110px;
 }
 
-.picture {
-    height: 300px;
+.profile-header {
+    height: 200px;
+    width: 400px;
+    /* margin: 100px; */
+    margin-bottom: 150px 
+}
+
+.profile-picture {
+    height: 200px;
     width: 200px;
 }

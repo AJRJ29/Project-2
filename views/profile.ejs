@@ -1,18 +1,18 @@
-
-    
-<body class="profileejs-container">
-    <div></div>
-    <h3><%= currentUser.name %>'s Profile</h3>
-    <div class="profile-container">
-        <% anime.forEach(function(anime) { %>
-        <div class="collection bookmark-container">
-            <h5><a class="black-text waves-effect waves-light" href="/comment/<%= anime.id %>"><%= anime.name %></a></h5>
+<body class="profile-body">
+    <div class="profile-top">
+        <div class="profile-header">
+            <h3><%= currentUser.name %>'s Profile</h3>
+            <img class="profile-picture" src="<%= currentUser.image %>">
         </div>
-            <div class="delete-container">
+        <div class="profile-container">
+            <% anime.forEach(function(anime) { %>
+            <div class="bookmark-container">
+                <h5><a class="black-text waves-effect waves-light" href="/comment/<%= anime.id %>"><%= anime.name %></a></h5>
                 <form method="POST" action="/anime/<%= anime.name %>/?_method=DELETE">
                     <button class="btn red waves-effect waves-light" type="submit">DELETE</button>
                 </form>
-            </div>    
-        <% }); %> 
+            </div>
+            <% }); %> 
+        </div>
     </div>
 </body>   
