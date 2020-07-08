@@ -2,5 +2,5 @@
 
 by [AJRJ29](https://github.com/AJRJ29)
 
-![](/img/css/home.png)
+![](public/img/home.png)
 
