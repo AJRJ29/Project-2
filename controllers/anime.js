@@ -5,11 +5,18 @@ const axios = require('axios');
 
 router.get('/', (req, res) => {
     let name = req.query.name
-    let animeUrl = `https://api.jikan.moe/v3/search/anime?q=${(name)}&page=1$`;
-    axios.get(animeUrl).then(function(apiResponse) {
-      var anime = apiResponse.data.results;
-      res.render('anime/search', {anime})
+    if(name) {
+        let animeUrl = `https://api.jikan.moe/v3/search/anime?q=${name}&page=1$`;
+        axios.get(animeUrl).then(function(apiResponse) {
+        var anime = apiResponse.data.results;
+        res.render('anime/search', {anime})
+    }).catch(function(error) {
+      console.log(error)
     })
+    } else {
+        let anime = [];
+        res.render('anime/search', {anime})
+    }
 })
 
 router.post('/', function(req, res) {
@@ -43,6 +50,7 @@ router.delete('/:name', function(req, res) {
         res.redirect('/profile')
     })
 })
+
 
 module.exports = router
 

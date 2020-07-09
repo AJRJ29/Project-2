@@ -1,0 +1,13 @@
+<div class="anime-container">
+  <div class="anime-pics">
+      <img class="anime-pic z-depth-5" src="<%= manga[0].image_url %>" alt="">
+  </div>
+  <div class="anime-details-container">
+      <span><h3 class="black-text #fffde7 yellow lighten-5"><%= manga[0].title %></h3></span>
+      <p class="black-text #fffde7 yellow lighten-5"><%= manga[0].synopsis %></p>
+      <form method="POST" action="/manga">
+          <input hidden type="text" name="name" value="<%= manga[0].title %>">
+          <button class="btn yellow black-text waves-effect waves-light" type="submit">Bookmark</button>
+      </form>
+  </div>
+</div>

@@ -57,17 +57,36 @@
     flex-wrap: wrap;
 }
 
-.collection {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-}
-
 .search-title {
     width: 100%;
     margin: 0;
+}
+
+.search-container {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+}
+
+.search-img {
+    height: 280px;
+    width: 200px
+}
+
+.search-pic-container{
+    display: flex;
+    height: 350px;
+    width: 300px;
+    /* border: 1px solid red; */
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 1rem;
+    flex: 0
 }
 
 /* ANIME EJS */
@@ -161,6 +180,24 @@ p {
 }
 
 .profile-picture {
+    border-radius: 20px;
     height: 200px;
     width: 200px;
 }
+
+/****** MANGA ******/
+
+.collection {
+    margin: 0;
+    padding: 0;
+}
+.manga-list {
+    height: 50px;
+    border: none;
+    margin: 0;
+}
+
+/* .manga-loop {
+     height: 50px;
+     margin: 0;
+} */

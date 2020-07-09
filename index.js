@@ -65,7 +65,7 @@ app.get('/profile', isLoggedIn, function(req, res) {
     db.anime.findAll({
         where: {
             userId: req.user.dataValues.id
-        }
+        },
     })
     .then( function(anime) {
     res.render('profile', {anime});
@@ -75,6 +75,7 @@ app.get('/profile', isLoggedIn, function(req, res) {
 // include auth controller
 app.use('/auth', require('./controllers/auth'));
 app.use('/anime', require('./controllers/anime'));
+app.use('/manga', require('./controllers/manga'));
 app.use('/comment', require('./controllers/comment'));
 
 // initialize app on port

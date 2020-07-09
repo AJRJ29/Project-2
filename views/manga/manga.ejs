@@ -1,0 +1,18 @@
+<body class="manga-body">
+    <div class="search-container">
+        <form method="GET" action="/manga">
+            <input type="text" name="name">
+            <button class="btn blue darken-2" type="submit">Search</button>
+        </form>
+    </br>
+        <div class="home-container">
+          <% manga.forEach(function(manga) { %>
+              <div class="home-pic-container">
+                  <img class="home-img z-depth-5" src="<%= manga.image_url %>" alt="">
+                  <p><a  class="black-text" href="/manga/<%= manga.title %>"><%= manga.title %></a></p>
+              </div>
+          <% }); %> 
+      </div> 
+    </div>       
+  </body>
+

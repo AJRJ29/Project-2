@@ -6,12 +6,15 @@
             <button class="btn blue darken-2" type="submit">Search</button>
         </form>
     </br>
-    <div class="search-loop">
+    <div class="search-container">
+    <% if(anime) { %>
         <% anime.forEach(function(anime) { %> 
-            <div class="collection">
-                <h6 class="search-title"><a class="collection-item black-text" href="/anime/<%= anime.title %>"><%= anime.title %></a></h6>
+            <div class="search-pic-container">
+                <img class="search-img z-depth-5" src="<%= anime.image_url %>" alt="">
+                <p><a  class="black-text" href="/anime/<%= anime.title %>"><%= anime.title %></a></p>
             </div>
-        <% }); %>
-    </div>
+        <% }); %> 
+    <% } %>
+    </div> 
     </div>       
 </body>
