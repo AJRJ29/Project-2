@@ -11,7 +11,6 @@ router.get('/:id', function(req, res) {
         where: {
             id: req.params.id
         },
-        include:[db.comment]
     })
     .then(function(anime) {
         res.render('anime/comment', {anime})

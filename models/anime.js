@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER
   }, {});
   anime.associate = function(models) {
-    // models.anime.belongsTo(models.user)
+    models.anime.belongsTo(models.user)
     models.anime.hasMany(models.comment)
     models.anime.belongsToMany(models.user, {through: 'users_anime'})
     // associations can be defined here

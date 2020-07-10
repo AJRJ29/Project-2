@@ -1,9 +1,9 @@
 <body class="manga-body">
+    <form method="GET" action="/manga">
+        <input type="text" name="name">
+        <button class="btn blue darken-2" type="submit">Search</button>
+    </form>
     <div class="search-container">
-        <form method="GET" action="/manga">
-            <input type="text" name="name">
-            <button class="btn blue darken-2" type="submit">Search</button>
-        </form>
     </br>
         <div class="home-container">
           <% manga.forEach(function(manga) { %>
