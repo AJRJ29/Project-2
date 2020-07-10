@@ -9,15 +9,12 @@ const flash = require('connect-flash');
 const passport = require('./config/ppConfig');
 const db = require('./models')
 const axios = require('axios'); 
-const multer = require('multer');
-const cloudinary = require('cloudinary');
 
 // want add a link to our customer middleware for isLoggedIn
 const SequelizeStore = require('connect-session-sequelize')(session.Store)
 
 //app setup
 const app = Express();
-const uploads = multer({dest: './uploads'})
 app.use(Express.urlencoded({ extended: false}));
 app.use(Express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');

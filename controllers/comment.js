@@ -2,9 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models');
 const axios = require('axios');
-const multer = require('multer');
-const cloudinary = require('cloudinary');
-const uploads = multer({dest: './uploads'})
+
 
 router.get('/:id', function(req, res) {
     db.anime.findOne({
