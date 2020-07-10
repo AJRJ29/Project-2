@@ -45,7 +45,7 @@
 /* SEARCH EJS */
 
 .search-body {
-    background-image: url("https://images.alphacoders.com/656/thumb-1920-656720.jpg");
+    background-image: url("https://mocah.org/uploads/posts/4507072-one-punch-man-saitama-genos.jpg");
     background-size: cover;
 
 }
@@ -128,9 +128,9 @@
 /* PROFILE EJS */
 
 .profile-body {
-    background-image: url("https://cdn.wallpapersafari.com/84/12/ktoNAr.jpg");
+    background-image: url("https://img.wallpapersafari.com/desktop/1366/768/91/41/Xqt1kg.jpg");
 }
-
+/* https://wallpapercave.com/wp/wp1959331.png */
 .profile-top {
     display: flex;
     /* border: 1px solid red; */
@@ -187,6 +187,12 @@ p {
 
 /****** MANGA ******/
 
+.manga-body {
+    background-image: url("https://i.pinimg.com/originals/09/6d/f0/096df0eb195b8f0d9475924f9a1e9425.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+
+}
 
 .manga-list {
     height: 50px;

@@ -12,6 +12,16 @@
                     <button class="btn red waves-effect waves-light" type="submit">DELETE</button>
                 </form>
             </div>
+        </div>
+            <% }); %> 
+        <div class="profile-container">
+            <% manga.forEach(function(manga) { %>
+                <div class="bookmark-container">
+                    <h5><a class="black-text waves-effect waves-light" href="/comment/manga/<%= manga.id %>"><%= manga.name %></a></h5>
+                    <form method="POST" action="/manga/<%= manga.name %>/?_method=DELETE">
+                        <button class="btn red waves-effect waves-light" type="submit">DELETE</button>
+                    </form>
+                </div>
             <% }); %> 
         </div>
     </div>

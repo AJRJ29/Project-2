@@ -17,6 +17,9 @@ module.exports = {
       animeId: {
         type: Sequelize.INTEGER
       },
+      mangaId: {
+      type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

@@ -67,8 +67,15 @@ app.get('/profile', isLoggedIn, function(req, res) {
             userId: req.user.dataValues.id
         },
     })
-    .then( function(anime) {
-    res.render('profile', {anime});
+    .then(function(anime) {
+    db.manga.findAll({
+        where: {
+            userId: req.user.dataValues.id
+        }
+    })
+    .then(function(manga) {
+        res.render('profile', {anime, manga});
+    })
     })
 })
 

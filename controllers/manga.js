@@ -19,6 +19,17 @@ router.get('/', (req, res) => {
     }
 })
 
+router.post('/', function(req, res) {
+    db.manga.findOrCreate({
+        where: {
+            name: req.body.name,
+            userId: req.user.dataValues.id
+        }
+    }).then(function() {
+        res.redirect('/profile')
+    })
+})
+
 router.get('/:name', (req, res) => {
     let name = req.params.name
     var mangaUrl = `https://api.jikan.moe/v3/search/manga?q=${(name)}&page=1$`;
@@ -27,6 +38,18 @@ router.get('/:name', (req, res) => {
         res.render('manga/show', {manga})
     }).catch(function(error) {
     console.log(error)
+    })
+})
+
+router.delete('/:name', function(req, res) {
+    db.manga.destroy({
+      where: {
+        name: req.params.name,
+        userId: req.user.dataValues.id
+      }
+    })
+    .then(function() {
+        res.redirect('/profile')
     })
 })
 
