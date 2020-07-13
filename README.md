@@ -6,7 +6,7 @@ by [AJRJ29](https://github.com/AJRJ29)
 
 MyAnime app allows users to find their favorite anime in the app. Users can search for an anime, and then the app will display the list of anime names. Users can view information about the anime once they click the anime name. Users can also make a profile and save the anime for future reference.
 
-See it live: [https://seir-auth.herokuapp.com/profile](https://seir-auth.herokuapp.com/profile)
+See it live: [https://seir-auth.herokuapp.com/](https://seir-auth.herokuapp.com/)
 
 ## 1. Project Planning
 
