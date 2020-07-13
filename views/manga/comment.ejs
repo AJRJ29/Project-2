@@ -1,22 +1,26 @@
-<div class="comment-container">  
-  <% manga.comments.forEach(function(comment) { %>
-    <div class="well">
-      <p>
-        "<%= comment.content %>" - <%= comment.name %>
-      </p>
+<body class="manga-comment-body"> 
+  <div class="manga-comment-container">  
+    <div class="manga-comments">
+        <% manga.comments.forEach(function(comment) { %>
+          <div class="well manga-comment-section">
+            <p>
+              "<%= comment.content %>" - <%= comment.name %>
+            </p>
+          </div>
+        <% }) %>
     </div>
-  <% }) %>
-
-  <form method="POST" action="/comment/manga/<%= manga.id %>">
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" class="form-control" id="name" name="name" required>
-    </div>
-
-    <div class="form-group">
-      <label for="content">Comment</label>
-      <textarea type="text" class="form-control" id="content" name="content" required></textarea>
-    </div>
-    <input type="submit" class="btn">
-  </form>
-</div>
+    <div class="manga-comments-form">
+      <form method="POST" action="/comment/manga/<%= manga.id %>">
+        <div class="form-group manga-comments-input">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group manga-comments-texarea">
+          <label for="content">Comment</label>
+          <textarea type="text" class="form-control" id="content" name="content" required></textarea>
+        </div>
+        <input type="submit" class="btn">
+      </form>
+    </div> 
+  </div>
+</body>
