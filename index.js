@@ -55,6 +55,8 @@ app.get('/', function(req, res) {
     axios.get(animeUrl).then( function(apiResponse) {
         let anime = apiResponse.data.top;
         res.render('index', {anime});
+    }).catch(function(error) {
+      console.log(error)
     })
 })
 
