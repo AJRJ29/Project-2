@@ -6,7 +6,7 @@ const axios = require('axios');
 router.get('/', (req, res) => {
     let name = req.query.name
     if(name) {
-        let animeUrl = `https://api.jikan.moe/v3/search/anime?q=${name}&page=1$`;
+        let animeUrl = `https://api.jikan.moe/v3/search/anime?q=${name}&limit=15`;
         axios.get(animeUrl).then(function(apiResponse) {
         var anime = apiResponse.data.results;
         res.render('anime/search', {anime})
@@ -32,7 +32,7 @@ router.post('/', function(req, res) {
 
 router.get('/:name', (req, res) => {
     let name = req.params.name
-    var animeUrl = `https://api.jikan.moe/v3/search/anime?q=${(name)}&page=1$`;
+    var animeUrl = `https://api.jikan.moe/v3/search/anime?q=${(name)}&limit=15`;
     axios.get(animeUrl).then(function(apiResponse) {
       var anime = apiResponse.data.results;
       res.render('anime/anime', {anime})

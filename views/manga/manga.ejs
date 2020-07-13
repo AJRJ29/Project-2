@@ -1,15 +1,28 @@
 <body class="manga-body">
-    <form method="GET" action="/manga">
-        <input type="text" name="name">
-        <button class="btn blue darken-2" type="submit">Search</button>
-    </form>
-    <div class="home-container">
-        <% manga.forEach(function(manga) { %>
-            <div class="home-pic-container">
-                <img class="home-img z-depth-5" src="<%= manga.image_url %>" alt="">
-                <p><a  class="black-text" href="/manga/<%= manga.title %>"><%= manga.title %></a></p>
+    <div class="manga-container">
+        <div class="manga2-container">
+            <div class="manga-header">
+                <h3>Manga List</h3>
             </div>
-        <% }); %> 
-    </div>      
+        </div>
+        <div class="manga1-form-container">
+            <div class="manga-form-container">
+                <form method="GET" action="/manga" class="manga-form">
+                    <input type="text" name="name" class="manga-input">
+                    <button class="btn black black-text blue darken-2" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+        <div class="mangalist-container">
+        <% if (manga) { %>
+            <% manga.forEach(function(manga) { %>
+                <div class="manga-pic-container">
+                    <img class="manga-img z-depth-5" src="<%= manga.image_url %>" alt="">
+                    <p><a  class="black-text" href="/manga/<%= manga.title %>"><%= manga.title %></a></p>
+                </div>
+            <% }); %>
+        <% }; %>   
+        </div> 
+    </div>        
 </body>
 

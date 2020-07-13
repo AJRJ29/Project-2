@@ -6,7 +6,7 @@ const axios = require('axios');
 router.get('/', (req, res) => {
     let name = req.query.name
     if(name) {
-        var mangaUrl = `https://api.jikan.moe/v3/search/manga?q=${(name)}&page=1$`;
+        var mangaUrl = `https://api.jikan.moe/v3/search/manga?q=${(name)}&limit=15`;
         axios.get(mangaUrl).then(function(apiResponse) {
         var manga = apiResponse.data.results;
         res.render('manga/manga', {manga})
@@ -32,7 +32,7 @@ router.post('/', function(req, res) {
 
 router.get('/:name', (req, res) => {
     let name = req.params.name
-    var mangaUrl = `https://api.jikan.moe/v3/search/manga?q=${(name)}&page=1$`;
+    var mangaUrl = `https://api.jikan.moe/v3/search/manga?q=${(name)}&limit=15`;
     axios.get(mangaUrl).then(function(apiResponse) {
         var manga = apiResponse.data.results;
         res.render('manga/show', {manga})

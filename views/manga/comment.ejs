@@ -1,20 +1,22 @@
-<% manga.comments.forEach(function(comment) { %>
-  <div class="well">
-    <h3>
-      "<%= comment.content %>" - <%= comment.name %>
-    </h3>
-  </div>
-<% }) %>
+<div class="comment-container">  
+  <% manga.comments.forEach(function(comment) { %>
+    <div class="well">
+      <p>
+        "<%= comment.content %>" - <%= comment.name %>
+      </p>
+    </div>
+  <% }) %>
 
-<form method="POST" action="/comment/manga/<%= manga.id %>">
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" name="name" required>
-  </div>
+  <form method="POST" action="/comment/manga/<%= manga.id %>">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
 
-  <div class="form-group">
-    <label for="content">Comment</label>
-    <textarea type="text" class="form-control" id="content" name="content" required></textarea>
-  </div>
-  <input type="submit" class="btn">
-</form>
+    <div class="form-group">
+      <label for="content">Comment</label>
+      <textarea type="text" class="form-control" id="content" name="content" required></textarea>
+    </div>
+    <input type="submit" class="btn">
+  </form>
+</div>

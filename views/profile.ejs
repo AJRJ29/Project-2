@@ -4,27 +4,29 @@
             <h3><%= currentUser.name %>'s Profile</h3>
             <img class="profile-picture" src="<%= currentUser.image %>">
         </div>
-        <div class="profile-container">
-            <h3>ANIME</h3>
-            <% anime.forEach(function(anime) { %>
-            <div class="bookmark-container">
-                <h5><a class="black-text waves-effect waves-light" href="/comment/<%= anime.id %>"><%= anime.name %></a></h5>
-                <form method="POST" action="/anime/<%= anime.name %>/?_method=DELETE">
-                    <button class="btn red waves-effect waves-light" type="submit">DELETE</button>
-                </form>
-            </div>
-            <% }); %> 
-        </div>
-        <div class="manga-bookmark">
-            <h3>MANGA</h3>
-            <% manga.forEach(function(manga) { %>
-                <div class="manga-bookmark-container">
-                    <h5><a class="black-text waves-effect waves-light" href="/comment/manga/<%= manga.id %>"><%= manga.name %></a></h5>
-                    <form method="POST" action="/manga/<%= manga.name %>/?_method=DELETE">
+        <div class="profile1-container">
+            <div class="profile-container">
+                <h3 class="anime-head">ANIME</h3>
+                <% anime.forEach(function(anime) { %>
+                <div class="bookmark-container">
+                    <h5><a class="black-text waves-effect waves-light" href="/comment/<%= anime.id %>"><%= anime.name %></a></h5>
+                    <form method="POST" action="/anime/<%= anime.name %>/?_method=DELETE">
                         <button class="btn red waves-effect waves-light" type="submit">DELETE</button>
                     </form>
                 </div>
-            <% }); %> 
+                <% }); %> 
+            </div>
+            <div class="manga-bookmark">
+                <h3 class="manga-head">MANGA</h3>
+                <% manga.forEach(function(manga) { %>
+                    <div class="manga-bookmark-container">
+                        <h5><a class="black-text waves-effect waves-light" href="/comment/manga/<%= manga.id %>"><%= manga.name %></a></h5>
+                        <form method="POST" action="/manga/<%= manga.name %>/?_method=DELETE">
+                            <button class="btn red waves-effect waves-light" type="submit">DELETE</button>
+                        </form>
+                    </div>
+                <% }); %> 
+            </div>
         </div>
     </div>
 </body>   

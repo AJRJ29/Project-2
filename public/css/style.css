@@ -5,11 +5,38 @@
 
 }
 
+
+
+
+
 /****** LOGIN EJS ******/
 
 .login-body {
     background-image: url("https://i.imgur.com/wPGcIRB.jpg")
 }
+
+.login-container {
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 400px;
+    border-bottom: 5px solid black;
+    border-left: 2px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 5px;
+    /* background: rgba(255,255,255,0.5); */
+    background: white;
+}
+
+
+
+
 
 
 /****** REGISTER EJS ******/
@@ -18,33 +45,78 @@
     background-image: url("https://i.pinimg.com/originals/09/6d/f0/096df0eb195b8f0d9475924f9a1e9425.jpg")
 }
 
+.register-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 500px;
+    background: white;
+    border-bottom: 5px solid black;
+    border-left: 2px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 5px;
+    /* background: rgba(255,255,255,0.5) */
+}
+
+
+
+
+
+
 /****** INDEX EJS ******/
+
+.home-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 .home-container {
     display: flex;
-    /* border: 1px solid red; */
     justify-content: center;
     flex-wrap: wrap;
     height: 100%;
     width: 100%;
+    border-bottom: 5px solid black;
+    border-left: 4px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    background: rgba(255,255,255,0.5);
+    /* padding: 30px; */
+    margin-bottom: 100px;
+    border-radius: 5px;
 }
 
 .home-img {
     height: 280px;
-    width: 200px
+    width: 200px;
+    border-radius: 3px;
+    border-bottom: 5px solid black;
+    border-left: 4px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
 }
 
 .home-pic-container{
     display: flex;
     height: 350px;
     width: 300px;
-    /* border: 1px solid red; */
     justify-content: center; 
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
-    margin: 1rem;
-    flex: 0
+    flex: 0;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 5px; 
 }
 
 .anime-name {
@@ -53,9 +125,29 @@
 
 .home-header {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 5px;
+    border-bottom: 5px solid black;
+    border-left: 4px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
 }
 
-/* SEARCH EJS */
+
+
+
+
+
+/****** SEARCH EJS ******/
 
 .search-body {
     background-image: url("https://mocah.org/uploads/posts/4507072-one-punch-man-saitama-genos.jpg");
@@ -63,30 +155,85 @@
 
 }
 
-.seach-container {
+.search-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    width: 100%;
     flex-wrap: wrap;
 }
 
-.search-title {
-    width: 100%;
-    margin: 0;
-}
-
-.search-container {
+.searchlist-container {
     display: flex;
-    /* border: 1px solid red; */
     justify-content: center;
     flex-wrap: wrap;
     height: 100%;
     width: 100%;
+    border-bottom: 5px solid black;
+    border-left: 2px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    background: rgba(255,255,255,0.5);
+    /* padding: 30px 50px 50px ; */
+    margin-bottom: 100px;
+    border-radius: 20px;
+}
+
+
+.search-pic-container{
+    display: flex;
+    height: 350px;
+    width: 300px;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 5px;
+    flex: 0;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: row;
+    style: none;
+}
+
+.search2-container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.search-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 300px;
+    background: rgba(255,255,255,0.5);
+    border-bottom: 5px solid black;
+    border-left: 4px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 20px;
+    margin-top: 50px;
 }
 
 .search-img {
     height: 280px;
-    width: 200px
+    width: 200px;
+    border-bottom: 5px solid black;
+    border-left: 4px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 20px;
 }
 
 .search-pic-container{
@@ -99,49 +246,299 @@
     flex-wrap: wrap;
     text-align: center;
     margin: 1rem;
-    flex: 0
+    flex: 0;
 }
 
-/* ANIME EJS */
+.search-header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80px;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 20px;
+    border-bottom: 5px solid black;
+    border-left: 4px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+
+
+
+
+
+
+/****** ANIME EJS ******/
 
 .anime-container {
     display: flex;
     /* border: 1px solid red; */
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     height: 100%;
     width: 100%;
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .anime-details-container {
     display: flex;
-    justify-content: flex-start; 
-    /* border: 1px solid red; */
     flex-wrap: wrap;
-    height: 400px;
+    justify-content: center; 
+    border: 3px solid black;
+    background: rgba(255,255,255,0.5);
+    border-radius: 10px;
+    height: 500px;
     width: 600px;
     margin: 1rem;
+    padding-right: 10px;
+}
+
+.animes-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 400px;
+    /* border: 1px solid red; */
+
+}
+
+.anime-synopsis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 600px;
+    /* border: 1px solid red; */
+    margin-left: 15px;
+}
+
+.anime-episodes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 130px;
+    /* border: 1px solid red; */
+}
+
+.anime-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 130px;
+    /* border: 1px solid red; */
+}
+
+.anime-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 130px;
+    /* border: 1px solid red; */
+}
+
+.anime-form-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    width: 120px;
+    /* border: 1px solid red; */
+}
+
+.anime1-form-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 190px;
+    width: 150px;
+    /* border: 1px solid red; */
 }
 
 .anime-pics {
     height: 400px;
     width: 330px;
-    /* border: 1px solid red; */
     margin: 1rem;
+    border-radius: 10px;
 }
 
 .anime-pic {
     height: 400px;
     width: 290px;
+    /* border: 3px solid black; */
+    border-radius: 10px;
 }
 
-/* PROFILE EJS */
+.anime-p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    width: 120px;
+}
+
+.anime-details {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 150px;
+    width: 400px;
+}
+
+
+
+
+
+
+/******* SHOW EJS *******/
+
+.mangas-container {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.mangas-details-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    border: 3px solid black;
+    background: rgba(255,255,255,0.5);
+    border-radius: 10px;
+    height: 500px;
+    width: 600px;
+    margin: 1rem;
+    padding-right: 10px;
+}
+
+.mangas-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 400px;
+    /* border: 1px solid red; */
+
+}
+
+.manga-synopsis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 600px;
+    /* border: 1px solid red; */
+    margin-left: 15px;
+}
+
+.manga-episodes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 130px;
+    /* border: 1px solid red; */
+}
+
+.manga-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 130px;
+    /* border: 1px solid red; */
+}
+
+.manga-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 130px;
+    /* border: 1px solid red; */
+}
+
+.mangas-form-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    width: 120px;
+    /* border: 1px solid red; */
+}
+
+.mangas-form-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 190px;
+    width: 150px;
+    /* border: 1px solid red; */
+}
+
+.manga-pics {
+    height: 400px;
+    width: 330px;
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+.manga-pic {
+    height: 400px;
+    width: 290px;
+    /* border: 3px solid black; */
+    border-radius: 10px;
+}
+
+.manga-p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    width: 120px;
+}
+
+.manga-details {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 150px;
+    width: 400px;
+}
+
+
+
+
+
+
+
+/******* PROFILE EJS *******/
 
 .profile-body {
     background-image: url("https://img.wallpapersafari.com/desktop/1366/768/91/41/Xqt1kg.jpg");
+    height: 100%;
+    width: 100%;
 }
 
 .profile-top {
@@ -155,33 +552,102 @@
 }
 
 .profile-container {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
     height: 100%;
     width: 100%;
 } 
 
+.manga-bookmark {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+}
+
 .manga-bookmark-container {
     display: flex;
     justify-content: flex-start;
+    flex-direction: row;
     flex-direction: wrap;
-    justify-content: space-between;
     align-items: center;
     height: 50px;
     width: 800px;
-    border: none; 
-   /* border: 1px solid red; */
+    /* border: none; */
 }
 
 .bookmark-container {
     display: flex;
     justify-content: flex-start;
+    flex-direction: row;
     flex-direction: wrap;
-    justify-content: space-between;
+    align-content: space-around;
     align-items: center;
     height: 50px;
     width: 800px;
-    border: none;
+    /* border: none; */
 }
 
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.5);
+    border-bottom: 5px solid black;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 4px solid black;
+    height: 300px;
+    width: 300px;
+    margin-top: 70px;
+    padding-bottom: 30px;
+    margin-bottom: 150px;
+    border-radius: 10px;
+    text-decoration: underline;
+}
+
+.profile-picture {
+    border-bottom: 5px solid black;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 4px solid black;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+.profile1-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    border-bottom: 5px solid black;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 4px solid black;
+    background: rgba(255,255,255,0.5);
+    /* padding: 30px 50px 50px ;*/
+    margin-bottom: 100px;
+}
+
+.manga-head {
+    text-decoration: underline;
+}
+
+.anime-head {
+    text-decoration: underline;
+}
 
 body {
     background-image: url("https://wallpapercave.com/wp/wp1959331.png");
@@ -194,18 +660,9 @@ p {
     height: 110px;
 }
 
-.profile-header {
-    height: 200px;
-    width: 400px;
-    /* margin: 100px; */
-    margin-bottom: 150px 
-}
 
-.profile-picture {
-    border-radius: 20px;
-    height: 200px;
-    width: 200px;
-}
+
+
 
 /****** MANGA ******/
 
@@ -215,13 +672,121 @@ p {
     background-size: cover;
 }
 
+ .manga-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+ .mangalist-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    border-bottom: 5px solid black;
+    border-left: 2px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    background: rgba(255,255,255,0.5);
+    /* padding: 30px 50px 50px ;*/
+    margin-bottom: 100px;
+}
+
+.manga-pic-container{
+    display: flex;
+    height: 350px;
+    width: 300px;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 5px;
+    flex: 0;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.manga2-container{
+    display: flex;
+    height: 100%;
+    width: 1000px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.manga-img {
+    height: 250px;
+    width: 200px;
+    background: red;
+    border-radius: 50%;
+    border-bottom: 5px solid black;
+    border-left: 4px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.manga1-form-container {
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.manga-form-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    height: 110px;
+    width: 350px;
+    background: rgba(255,255,255,0.5);
+    border-bottom: 10px solid black;
+    border-left: 2px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
+
+.manga-form {
+    display: flex;
+    flex-direction: row;
+    style: none;
+}
+
+.manga-input {
+    height: 5px;
+    width: 10px
+}
+
+.manga-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 600px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background: rgba(255,255,255,0.5);
+    border-bottom: 10px solid black;
+    border-left: 2px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 50%;
+}
+
 .manga-list {
     height: 50px;
     border: none;
     margin: 0;
-}
+}  
 
-/* .manga-loop {
-     height: 50px;
-     margin: 0;
-} */
+

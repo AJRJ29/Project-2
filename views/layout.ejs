@@ -14,10 +14,10 @@
             <div class="nav-wrapper">
                 <a href="/" class="brand-logo">MyAnime</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <% if (currentUser) { %>
                     <li><a href="/">Home</a></li>
                     <li><a href="/manga">Manga</a></li>
                     <li><a href="/anime">AnimeList</a></li>
-                <% if (currentUser) { %>
                     <li><a href="/profile">Profile</a></li>
                     <li><a href="/auth/logout">Logout</a></li>
                 <% } else { %>

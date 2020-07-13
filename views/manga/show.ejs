@@ -1,13 +1,34 @@
-<div class="anime-container">
-  <div class="anime-pics">
-      <img class="anime-pic z-depth-5" src="<%= manga[0].image_url %>" alt="">
-  </div>
-  <div class="anime-details-container">
-      <span><h3 class="black-text #fffde7 yellow lighten-5"><%= manga[0].title %></h3></span>
-      <p class="black-text #fffde7 yellow lighten-5"><%= manga[0].synopsis %></p>
-      <form method="POST" action="/manga">
-          <input hidden type="text" name="name" value="<%= manga[0].title %>">
-          <button class="btn yellow black-text waves-effect waves-light" type="submit">Bookmark</button>
-      </form>
-  </div>
-</div>
+<body class="manga-body">  
+    <div class="mangas-container">
+        <div class="manga-pics">
+            <img class="manga-pic z-depth-5" src="<%= manga[0].image_url %>" alt="">
+        </div>
+        <div class="mangas-details-container">
+            <div class="mangas-head">
+                <h3 class="black-text lighten-5"><%= manga[0].title %></h3>
+            </div>
+            <div class="manga-synopsis">
+                <p class="black-text lighten-5"><%= manga[0].synopsis %></p>
+            </div>
+            <div class="manga-details">
+                <div class="manga-episodes">
+                    <p class="black-text lighten-5 manga-p">Episodes:<%= manga[0].episodes %></p>
+                </div>
+                <div class="manga-type">
+                    <p class="black-text lighten-5 manga-p">Type:<%= manga[0].type %></p>
+                </div>
+                <div class="manga-score">
+                    <p class="black-text lighten-5 manga-p">Score:<%= manga[0].score %></p>
+                </div>
+            </div>
+            <div class="mangas-form-container">
+                <div class="mangas-form-container">
+                    <form method="POST" action="/manga">
+                        <input hidden type="text" name="name" value="<%= manga[0].title %>">
+                        <button class="btn yellow black-text waves-effect waves-light" type="submit">Bookmark</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

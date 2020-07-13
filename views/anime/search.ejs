@@ -1,15 +1,23 @@
-
 <body class="search-body">
-    <form method="GET" action="/anime">
-        <input type="text" name="name">
-        <button class="btn blue darken-2" type="submit">Search</button>
-    </form>
     <div class="search-container">
-        <% anime.forEach(function(anime) { %> 
-            <div class="search-pic-container">
-                <img class="search-img z-depth-5" src="<%= anime.image_url %>" alt="">
-                <p><a  class="black-text" href="/anime/<%= anime.title %>"><%= anime.title %></a></p>
+        <div class="search2-container">
+            <div class="search-form-container">
+                <form method="GET" action="/anime" class="search-form">
+                    <input  type="text" name="name">
+                    <button class="btn black darken-2" type="submit">Search</button>
+                </form>
             </div>
-        <% }); %> 
+        <div class="search-header">
+            <h3>Anime List</h3>
+        </div>
+        </div>
+        <div class="searchlist-container">
+            <% anime.forEach(function(anime) { %> 
+                <div class="search-pic-container">
+                    <img class="search-img z-depth-5" src="<%= anime.image_url %>" alt="">
+                    <p><a  class="black-text" href="/anime/<%= anime.title %>"><%= anime.title %></a></p>
+                </div>
+            <% }); %> 
+        </div> 
     </div>     
 </body>

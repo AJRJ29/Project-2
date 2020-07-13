@@ -1,12 +1,11 @@
 <div class="home-background">
     <h3 class="home-header">Popular Anime</h3>
-
-    <div class="home-container">
+       <div class="home-container">
         <% anime.forEach(function(anime) { %>
             <div class="home-pic-container">
                 <img class="home-img z-depth-5" src="<%= anime.image_url %>" alt="">
                 <p><a  class="black-text" href="/anime/<%= anime.title %>"><%= anime.title %></a></p>
             </div>
         <% }); %> 
-    </div> 
+        </div>   
 </div>
