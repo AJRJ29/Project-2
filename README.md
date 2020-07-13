@@ -87,7 +87,7 @@ _**DELETE**_
 **/anime:name** - delete a bookmark 
 
 
-_**Wireframe**_
+### Wireframe
 
 ![](public/img/wireframe.png)
 
