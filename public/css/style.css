@@ -13,6 +13,8 @@
 
 .login-body {
     background-image: url("https://i.imgur.com/wPGcIRB.jpg")
+    /* background source 
+    https://www.kotaku.co.uk/2016/11/14/makoto-shinkais-your-name-comes-to-uk-cinemas-this-november */
 }
 
 .login-container {
@@ -43,6 +45,8 @@
 
 .register-body {
     background-image: url("https://i.pinimg.com/originals/09/6d/f0/096df0eb195b8f0d9475924f9a1e9425.jpg")
+    /* background souce
+    https://wallpapercave.com/your-lie-in-april-wallpapers */
 }
 
 .register-container {
@@ -151,6 +155,8 @@
 
 .search-body {
     background-image: url("https://mocah.org/uploads/posts/4507072-one-punch-man-saitama-genos.jpg");
+    /* background source
+    https://mocah.org/4507072-one-punch-man-saitama-genos.html */
     background-size: cover;
 
 }
@@ -543,6 +549,8 @@
 
 .profile-body {
     background-image: url("https://img.wallpapersafari.com/desktop/1366/768/91/41/Xqt1kg.jpg");
+    /* background source */
+    /* https://www.99images.com/wallpapers/anime/a-silent-voice-android-iphone-desktop-hd-backgrounds-wallpapers-1080p-4k-luz1/125712 */
     height: 100%;
     width: 100%;
 }
@@ -657,6 +665,8 @@
 
 body {
     background-image: url("https://wallpapercave.com/wp/wp1959331.png");
+    /* background source */
+    /* https://wall.alphacoders.com/by_sub_category.php?id=241999&name=Mob+Psycho+100+Wallpapers */
     background-attachment: fixed;
     background-size: cover;
 }
@@ -674,6 +684,8 @@ p {
 
 .manga-body {
     background-image: url("https://wallpaperplay.com/walls/full/9/7/6/31354.jpg");
+    /* background source */
+    /* https://wall.alphacoders.com/by_sub_category.php?id=241999&name=Mob+Psycho+100+Wallpapers */
     background-attachment: fixed;
     background-size: cover;
 }
@@ -765,7 +777,6 @@ p {
 .manga-form {
     display: flex;
     flex-direction: row;
-    style: none;
 }
 
 .manga-input {
@@ -794,4 +805,3 @@ p {
     border: none;
     margin: 0;
 }  
-
